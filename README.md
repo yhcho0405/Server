@@ -1,2 +1,3 @@
-# Server
-[ft_server]This server will run multiples services: Wordpress, phpMyAdmin, and a SQL database. (with Docker)
+#ft_server
+
+![](https://i.imgur.com/XjTTR0i.png)
