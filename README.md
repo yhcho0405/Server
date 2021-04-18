@@ -2,7 +2,7 @@
 
 ### How to run
 
-```bash
+```sh
 docker build . -t ft_server
 docker run -it -p80:80 -p443:443 ft_server
 ```
