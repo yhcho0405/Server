@@ -1,6 +1,6 @@
 FROM	debian:buster
 
-LABEL	author="youncho@student.42seoul.kr"
+LABEL	maintainer="youncho@student.42seoul.kr"
 
 COPY	srcs/* tmp/
 
@@ -16,7 +16,7 @@ RUN		apt-get update && apt-get install -y \
 		php7.3-mbstring \
 		wget
 
-RUN		openssl req -newkey rsa:4096 -days 365 -nodes -x509 -subj "/C=KR" -keyout /etc/ssl/private/localhost.key -out /etc/ssl/certs/localhost.crt
+RUN		openssl req -newkey rsa:4096 -days 365 -nodes -x509 -subj "/C=KR/ST=Seoul/L=Seoul/O=42Seoul/OU=Cadet/CN=localhost" -keyout /etc/ssl/private/localhost.key -out /etc/ssl/certs/localhost.crt
 RUN		mv /tmp/default /etc/nginx/sites-available/default
 
 RUN		wget https://wordpress.org/latest.tar.gz && tar -xvf latest.tar.gz -C /var/www/html/ && rm latest.tar.gz

@@ -13,7 +13,7 @@ server {
 	ssl_certificate_key /etc/ssl/private/localhost.key;
 
 	root /var/www/html;
-	index index.html index.htm index.php;
+	index index.html index.htm index.nginx-debian.html index.php;
 
 	server_name ft_server;
 	location / {
